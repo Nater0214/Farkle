@@ -26,10 +26,6 @@ class Dice: # Dice variables and methods
         self.saved.append(self.unsaved[die - 1])
         self.unsaved.pop(die - 1)
 
-
-    def display(self): # Prints all the dice values
-        print(f"Saved: {self.saved}\nUnsaved: {self.unsaved}")
-
 dice = Dice()
 
 
@@ -47,9 +43,9 @@ def get_input(inp):
 
 
 clear = lambda: system("cls")
+display = lambda: print(f"Saved: {dice.saved}\nUnsaved: {dice.unsaved}\nTurn: {turns}")
 
-
-turns = 0
+turns = 1
 
 clear()
 print("Welcome to Farkle!")
